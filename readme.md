@@ -10,12 +10,9 @@ Projekt ma na celu zaprezentować moje rozwiązanie na testowanie workflow oraz 
 2. [Wymagania wstępne](#wymagania-wstępne)
 3. [Struktura projektu](#struktura-projektu)
 4. [Uruchomienie projektu](#uruchomienie-projektu)
-5. [Workflow testów](#workflow-testów)
-6. [Konteneryzacja](#konteneryzacja)
-7. [Rozwiązywanie problemów](#rozwiązywanie-problemów)
-8. [Raporty](#raporty)
-9. [Uzasadnienie wyboru playwright](#uzasadnienie-wyboru-playwright)
-10. [Raport błędów](#raport-błedów)
+5. [Konteneryzacja](#konteneryzacja)
+6. [Uzasadnienie wyboru playwright](#uzasadnienie-wyboru-playwright)
+7. [Raport błędów](#raport-błędów)
 
 
 ## Workflow 1 Test E2E
@@ -54,7 +51,7 @@ Projekt ma na celu zaprezentować moje rozwiązanie na testowanie workflow oraz 
 
 ## Uruchomienie projektu 
 
-## Wymagania wstępne
+### Wymagania wstępne
 - Python 3.10
 - Docker Desktop (dla konteneryzacji)
 
