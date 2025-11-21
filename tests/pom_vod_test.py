@@ -22,6 +22,6 @@ def test_example(page: Page,phrase):
     detail_page=DetailPage(page,phrase)
     detail_page.check_title_in_h1() #sprawdzenie czy h1 zawiera fraze 
     detail_page.play_movie() #odtworzenie filmu
-    detail_page.mute_sound() #wyciszenie dźwięku
+    #detail_page.mute_sound() #wyciszenie dźwięku
     detail_page.wait_for_popup() #obsługa popup
     detail_page.get_popup_url() #sprawdzenie url popupa

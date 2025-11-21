@@ -35,6 +35,9 @@ Projekt ma na celu zaprezentować moje rozwiązanie na testowanie workflow oraz 
 4. Inny błąd znaleziony to niepoprawna obsługa filtrowania na mobile
 5. Wykonanie raportu 
 
+## Struktura projektu
+1. Test workflow nr 1 znajduje się w tests/pom_vod_test.py
+2. Test workflow nr 2 znajduje się w tests/api/test_api_get.py
 
 ## Uruchomienie projektu 
 **Lokalnie** 
