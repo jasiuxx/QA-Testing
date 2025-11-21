@@ -21,7 +21,7 @@ class DetailPage:
         
         
     def play_movie(self):
-        self.play.click()
+        self.play.click(timeout=10000)
         
     def mute_sound(self):
         self.page.get_by_role("button", name="Mute").click()
