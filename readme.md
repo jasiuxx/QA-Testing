@@ -5,13 +5,26 @@
 ## OPIS
 Projekt ma na celu zaprezentować moje rozwiązanie na testowanie workflow oraz api na stronie `https://vod.film/filmy`. W projekcie zostały utworzone testy za pomocą Playwright oraz Pytest. Testy sprawdzają poprawność wyszukiwania fraz za pomocą UI oraz endpointu API. Dodatkowo do projektu jest dołączony plik raport_bledow.md będacy wynikiem testu manualnego sekcji sortowania.
 
+## Spis treści
+1. [Opis](#opis)
+2. [Wymagania wstępne](#wymagania-wstępne)
+3. [Struktura projektu](#struktura-projektu)
+4. [Uruchomienie projektu](#uruchomienie-projektu)
+5. [Workflow testów](#workflow-testów)
+6. [Konteneryzacja](#konteneryzacja)
+7. [Rozwiązywanie problemów](#rozwiązywanie-problemów)
+8. [Raporty](#raporty)
+9. [Uzasadnienie wyboru playwright](#uzasadnienie-wyboru-playwright)
+10. [Raport błędów](#raport-błedów)
+
+
 ## Workflow 1 Test E2E
 1. Wejście na stronę vod.film
 2. Wyszukanie frazy
 3. Sprawdzenie czy fraza jest dostępna na liśćie filmów
 4. Wejście na stronę szczegółów filmu 
 5. Sprawdzenie czy fraza zawiera sie w h1
-6. Sprawdzenie dostępnośći przycisku play
+6. Sprawdzenie dostępności przycisku play
 7. Kliknięcie popup w odstępie 1-60 sekund od startu odtwarzania
 8. Przejście na stronę z popup
 
@@ -40,14 +53,35 @@ Projekt ma na celu zaprezentować moje rozwiązanie na testowanie workflow oraz 
 2. Test workflow nr 2 znajduje się w tests/api/test_api_get.py
 
 ## Uruchomienie projektu 
-**Lokalnie** 
 
+## Wymagania wstępne
+- Python 3.10
+- Docker Desktop (dla konteneryzacji)
+
+**Lokalnie** 
 1. pip install -r requirements.txt
-2. pytest
+2. playwright install --with-deps chromium chrome
+3. pytest
 
 **Github actions**
-1. push lub pull request
-2. test uruchomi się automatycznie i poda wyniki w repozytorium github
+Testy uruchamiają się automatycznie przy każdym push/pull request
+Plik konfiguracyjny: `.github/workflows/pytest.yml`
+
+## Konteneryzacja
+
+### Uruchomienie 
+0. Wymagane pliki Dockerfile oraz docker-compose.yml
+1. Budowa kontenera  
+- docker-compose build
+2. Jednorazowe wykonanie w kontenerze wszystkich testów
+- docker-compose run --rm playwright-tests
+3. Jednorawzowe wykonanie tylko testów api 
+- docker-compose run --rm playwright-tests pytest tests/api/
+4. Jednorawzowe wykonanie tylko testów api 
+- docker-compose run --rm playwright-tests pytest tests/pom_vod_test.py
+
+
+
 
 
 
