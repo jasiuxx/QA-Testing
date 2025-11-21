@@ -17,7 +17,7 @@ class DetailPage:
         
     def wait_for_popup(self):
         self.page.wait_for_timeout(1000  )#czekanie od 1 sekundy po odwtworzeniu playera
-        self.page.locator("#popup").get_by_text("Zarejestruj się").click(timeout=80000) #czekanie do 60 sekund na popout
+        self.page.locator("#popup").get_by_text("Zarejestruj się").click(timeout=60000) #czekanie do 60 sekund na popout
         
         
     def play_movie(self):
