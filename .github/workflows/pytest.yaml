@@ -18,11 +18,5 @@ jobs:
         pip install -r requirements.txt
         playwright install --with-deps chromium chrome
     - name: Run tests
-      env:
-        # Zmienne środowiskowe dla Playwright w headless mode
-        DISPLAY: :99
-        PLAYWRIGHT_BROWSERS_PATH: 0
-        # Pomaga w renderowaniu elementów w CI
-        CI: true
       run: |
         pytest
